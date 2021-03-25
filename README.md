@@ -51,7 +51,7 @@ Scenario 2. Call a standup to discuss the progress for 15 mins
 3. Start the Appium server from desktop client or running cmd
    appium
    
-4. run pom.xml file 
+4. run calenderTest.java file or testng.xml file from your IDE
 
 ## Test Steps Executed in scenario 1
 
@@ -65,7 +65,7 @@ Scenario 2. Call a standup to discuss the progress for 15 mins
 
 5.Enter Title and Save
 
-Note : The condition Friday between 9:30 am to 1:30 pm for next 3 months is not yet added. 
+Note : The condition Friday between 9:30 am to 1:30 pm for next 3 months is not yet added.
 
 ## Reports
 
