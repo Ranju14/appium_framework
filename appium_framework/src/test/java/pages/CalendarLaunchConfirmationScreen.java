@@ -14,9 +14,8 @@ public class CalendarLaunchConfirmationScreen extends BasePage {
 		gotItButton = driver.findElement(By.id("done_button"));
 	}
 
-	public CalendarLaunchConfirmationScreen clickConfirm() {
+	public CalendarHomeScreen clickConfirm() {
 		gotItButton.click();
-		gotItButton.click();
-		return this;
+		return new CalendarHomeScreen(driver);
 	}
 }

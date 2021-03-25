@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeTest;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
+
+import utils.Constants;
 public class BaseTest {
 
 	protected AndroidDriver<AndroidElement> driver;
@@ -16,16 +18,16 @@ public class BaseTest {
 	@BeforeTest 
 	public void setup() throws MalformedURLException {	
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-		capabilities.setCapability(MobileCapabilityType.VERSION, "11");
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus5");
-		capabilities.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Constants.PLATFORM_NAME_VALUE);
+		capabilities.setCapability(MobileCapabilityType.VERSION, Constants.PLATFORM_VERSION_VALUE);
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, Constants.DEVICE_NAME_VALUE);
+		capabilities.setCapability(MobileCapabilityType.UDID, Constants.UDID_VALUE);
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
-		capabilities.setCapability("automationName", "Appium");
-		capabilities.setCapability("appPackage", "com.google.android.calendar");
-		capabilities.setCapability("appActivity", "com.android.calendar.event.LaunchInfoActivity");
+		capabilities.setCapability(Constants.AUTOMATION_NAME_KEY, Constants.AUTOMATION_NAME_VALUE);
+		capabilities.setCapability(Constants.APP_PACKAGE_KEY, Constants.APP_PACKAGE_VALUE);
+		capabilities.setCapability(Constants.APP_ACTIVITY_KEY, Constants.APP_ACTIVITY_VALUE);
 
-		URL url = new URL("http://127.0.0.1:4723/wd/hub");
+		URL url = new URL(Constants.url);
 		driver = new AndroidDriver<AndroidElement>(url, capabilities);
 	}
 }

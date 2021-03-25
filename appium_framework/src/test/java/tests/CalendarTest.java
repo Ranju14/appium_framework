@@ -1,14 +1,27 @@
 package tests;
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pages.CalenderLaunchScreen;
+
+import pages.CalendarLaunchScreen;
 
 public class CalendarTest extends BaseTest {
 
-	@Test
-	public void createCalendarInvite() {
-		new CalenderLaunchScreen(driver)
+	private static final String CalenderTitle = "Workshop";
+	
+	@DataProvider(name = "Title")
+    public static Object[][] Titles() {
+        return new Object[][]{{CalenderTitle}};
+    }
+	
+	@Test(dataProvider = "Title")		
+	public void createCalendarInvite(String title) {
+		new CalendarLaunchScreen(driver)
 		.gotoConfirmationScreen()
-		.clickConfirm();
+		.clickConfirm()
+		.tapOnPlus()
+		.tapEvents()
+		.enterTitle(title)
+		.clickOnSave();
 	}
 }
