@@ -55,9 +55,13 @@ Scenario 2. Call a standup to discuss the progress for 15 mins
 
 ## Test Steps Executed in scenario 1
 1.Launch the app
+
 2.navigate through the splash screen
+
 3.Click on + button on in Calender home screen
+
 4.Select Events on the overlay menu
+
 5.Enter Title and Save
 
 Note : The condition Friday between 9:30 am to 1:30 pm for next 3 months is not yet added. 
