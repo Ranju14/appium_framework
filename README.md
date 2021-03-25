@@ -26,7 +26,7 @@ Scenario 2. Call a standup to discuss the progress for 15 mins
     java -version
     echo $JAVA_HOME
 
-5 : appium  is installed and verified by appium-doctor
+4 : appium  is installed and verified by appium-doctor
     npm install -g appium
 
     npm install appium-doctor -g
@@ -41,7 +41,7 @@ Scenario 2. Call a standup to discuss the progress for 15 mins
 ### Steps to run
 
 1 . Update the the below desired capabalities with the test device values  in the Constants.java file.
-  PLATFORM_VERSION_VALUE= "11";
+ 	PLATFORM_VERSION_VALUE= "11";
 	public static final String DEVICE_NAME_VALUE = "Nexus5";
 	public static final String UDID_VALUE = "emulator-5554";
   
@@ -54,6 +54,7 @@ Scenario 2. Call a standup to discuss the progress for 15 mins
 4. run pom.xml file 
 
 ## Test Steps Executed in scenario 1
+
 1.Launch the app
 
 2.navigate through the splash screen
